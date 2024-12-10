@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+        <title>Prova script javascript</title>
+
+        <script type="text/javascript" src="js/file.js"></script>
+    </head>
+    <body>
+        <h1 id="titolo"></h1>
+
+        <div>
+            <button onclick="rendiMaiuscolo()">
+                Rendi titolo maiuscolo
+            </button>
+        </div>
+
+        <br>
+
+        <div>
+            <button onclick="rendiMinuscolo()">
+                Rendi titolo minuscolo
+            </button>
+        </div>
+
+    </body>
+    <script type="text/javascript">
+        document.getElementById("titolo").innerHTML = "Titolo prova script javascript";
+
+        function rendiMaiuscolo(){
+            var titolo = document.getElementById("titolo").innerHTML;
+            var titoloMaiuscolo = titolo.toUpperCase();
+
+            document.getElementById("titolo").innerHTML = titoloMaiuscolo;
+        }
+    </script>
+</html>

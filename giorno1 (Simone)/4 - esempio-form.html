@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Titolo di esempio</title>
+    </head>
+    <body>
+        <h1> Form di registrazione</h1>
+        
+        <fieldset>
+        <legend>Form di registro</legend>
+        <form name= "formEsempio" method ="POST">
+
+            <!-- NOME -->
+
+            <label for = "nome">Nome</label> <br>
+            <input type = "text" name = "nome" value = ""/>
+
+            <br><br>
+
+            <!-- COGNOME -->
+            <label for = "cognome">Cogome</label> <br>
+            <input type = "text" name = "cognome" value = ""/>
+
+            <br><br>
+
+            
+
+            <!-- SESSO -->
+            Sesso: <br>
+            M: <input type = "radio" name = "sesso" value = "M"/>
+            F: <input type = "radio" name = "sesso" value = "F"/>
+
+            <br><br>
+
+            <!-- COMPETENZE -->
+
+            <textarea name = "competenze" id = "competenze" cols= "30" rows = "10"></textarea>
+
+            <br><br>
+            
+            Nazionalità: <br>
+            <select name = "nazionalita">
+                <option value = "0"></option>
+                <option value = "1">Italiana</option>
+                <option value = "2">Inglese</option>
+                <option value = "3">Cinese</option>
+                <option value = "4">Giapponese</option>
+
+
+            </select>
+
+            <br><br>
+
+            <!-- TRATTAMENTO DATI PERSONALI -->
+            Trattamento dei dati personali: <br>
+            <input type = "checkbox" name = "trattamentoDatiPersonali" value = "ok"/>
+
+            <br><br>
+
+            <button name = "invia" type ="submit">
+                Invia
+            </button>
+
+        </form>
+        </fieldset>
+        
+    </body>
+</html>

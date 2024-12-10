@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <title>
+            Costruisci pagina di registrazione utente utilizzando HTML e CSS
+        </title>
+
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <h1>Registrazione utente</h1>
+
+        <!-- FORM -->
+        <form id="form" method="POST">
+
+            <div class="form-control">
+                <label for="name" id="label-name">
+                    Nome:
+                </label>
+
+                <!-- INPUT TEXT -->
+                <input type="text" id="name" name="name" placeholder="Inserisci nome" />
+            </div>
+
+            <div class="form-control">
+                <label for="email" id="label-email">
+                    Email:
+                </label>
+
+                <!-- INPUT EMAIL -->
+                <input type="email" id="email" name="email" placeholder="Inserisci email" />
+            </div>
+
+            <div class="form-control">
+                <label for="age" id="label-age">
+                    Età:
+                </label>
+
+                <!-- INPUT TEXT -->
+                <input type="text" id="age" name="age" placeholder="Inserisci età" />
+            </div>
+
+            <div class="form-control">
+                <label for="role" id="label-role">
+                    Occupazione:
+                </label>
+
+                <!-- SELECT -->
+                <select id="role" name="role">
+                    <option value="1 - studente">Studente</option>
+                    <option value="2 - impiegato">Impiegato</option>
+                    <option value="3 - disoccupato">Disoccupato</option>
+                    <option value="4 - altro">Altro</option>
+                </select>
+            </div>
+
+            <div class="form-control">
+                <label>
+                    Sei interessato ad imparare nuovi linguaggi di programmazione?
+                </label>
+
+                <!-- INPUT RADIO BUTTON -->
+                <label for="recommed-1">
+                    <input type="radio" id="recommed-1" name="interested" value="Si">Si</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio" id="recommed-2" name="interested" value="No">No</input>
+                </label>
+                <label for="recommed-3">
+                    <input type="radio" id="recommed-3" name="interested" value="Non lo so">Non lo so</input>
+                </label>
+            </div>
+
+            <div class="form-control">
+                <label>Linguaggi e framework che conosci
+                    <small>(seleziona uno o più elementi)</small>:
+                </label>
+
+                <!-- INPUT CHECHBOX -->
+                <label for="inp-1">
+                    <input type="checkbox" name="checkbox-C" value="Si">C</input>
+                </label>
+                
+                <label for="inp-2">
+                    <input type="checkbox" name="checkbox-C++" value="Si">C++</input>
+                </label>
+
+                <label for="inp-3">
+                    <input type="checkbox" name="checkbox-C#" value="Si">C#</input>
+                </label>
+
+                <label for="inp-4">
+                    <input type="checkbox" name="checkbox-java" value="Si">Java</input>
+                </label>
+
+                <label for="inp-5">
+                    <input type="checkbox" name="checkbox-python" value="Si">Python</input>
+                </label>
+
+                <label for="inp-6">
+                    <input type="checkbox" name="checkbox-js" value="Si">JavaScript</input>
+                </label>
+
+                <label for="inp-7">
+                    <input type="checkbox" name="checkbox-react" value="Si">React</input>
+                </label>
+
+                <label for="inp-7">
+                    <input type="checkbox" name="checkbox-angular" value="Si">Angular</input>
+                </label>
+
+                <label for="inp-7">
+                    <input type="checkbox" name="checkbox-django" value="Si">Django</input>
+                </label>
+
+                <label for="inp-7">
+                    <input type="checkbox" name="checkbox-spring" value="Si">Spring</input>
+                </label>
+            </div>
+
+            <div class="form-control">
+                <label for="comment">
+                    Commenti o suggerimenti:
+                </label>
+
+                <textarea name="comment" id="comment"></textarea>
+            </div>
+
+            <button type="submit" name="submit">
+                Registrati
+            </button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" href = "css/form.css"/>
+        <title>Registazione utente</title>
+    </head>
+    <body>
+        <h1>Registrazione utente</h1>
+
+        
+         <form name = "registrazioneUtente" method = "post">
+
+            <!--NOME-->
+            <div  style ="text-align:left;">
+            <label for = "nome">Nome:</label><br>
+            <input type = "text" name = "nome" placeholder="Inserisci nome"/>
+             </div>
+            <br>
+
+            <!--EMAIL-->
+            <div  style ="text-align:left;">
+            <label for = "email">Email:</label><br>
+            <input type = "text" name = "email" placeholder="Inserisci email"/>
+            </div>
+            <br>
+
+            <!--ETA-->
+            <div  style ="text-align:left;">
+            <label for = "eta">Età:</label><br>
+            <input type = "text" name = "eta" placeholder="Inserisci età"/>
+             </div>
+            <br>
+
+            <!--OCCUPAZIONE-->
+            <div  style ="text-align:left;">
+            <label>Occupazione:</label><br>
+            <select name = "occupazione">
+                <option value="0"></option>
+                <option value="1">Studente</option>
+                <option value="2">Disoccupato</option>
+                <option value="3">Lavoratore</option>
+                </div>
+
+            </select>
+            <br><br>
+
+            <p>Sei interessato ad imparare nuovi linguaggi di programmazione?</p>
+            
+            <input type = "radio" name = "scelta" value = "Sì"/><i>Sì</i><br>
+            <input type = "radio" name = "scelta" value = "No"/><i>No</i><br>
+            <input type = "radio" name = "scelta" value = "Non so"/><i>Non so</i>
+            <br><br>
+
+            <p>Linguaggi e framework che conosci? <i><small>(seleziona uno o più elementi)</small></i> </p>
+
+            <input type = "checkbox" name = "linguaggi" value = "C"/><label>C</label><br>
+            <input type = "checkbox" name = "linguaggi" value = "C++"/><label>C++</label><br>
+            <input type = "checkbox" name = "linguaggi" value = "C#"/><label>C#</label><br>
+            <input type = "checkbox" name = "linguaggi" value = "Java"/><label>Java</label><br>
+            <input type = "checkbox" name = "linguaggi" value = "Python"/><label>Python</label><br>
+            <input type = "checkbox" name = "linguaggi" value = "React"/><label>React</label><br>
+            <input type = "checkbox" name = "linguaggi" value = "Angular"/><label>Angular</label><br>
+            <input type = "checkbox" name = "linguaggi" value = "Django"/><label>Django</label><br>
+            <input type = "checkbox" name = "linguaggi" value = "Spring"/><label>Spring</label><br>
+
+            <br>
+            <p>Commenti e suggerimenti</p><br>
+            <textarea name = "competenze" id = "competenze" cols= "30" rows = "10"></textarea>
+
+            <div  style ="text-align:center;"><button name = "registrati" type ="submit">
+                Registrati
+            </button></div>
+
+            
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+        </form>
+       
+    </body>
+</html>
