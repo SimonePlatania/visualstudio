@@ -73,7 +73,6 @@ function prendiVocali() {
 
         var minuti = (ore - arrotondaOre) * 60;
         var arrotondaMinuti = Math.floor(minuti);
-
         document.getElementById("risultatoE4").innerHTML = arrotondaOre + " ora/e " + arrotondaMinuti + " minuto/i"
 
        }
