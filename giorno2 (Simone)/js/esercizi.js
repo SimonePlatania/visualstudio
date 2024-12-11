@@ -56,7 +56,7 @@ function prendiVocali() {
 
       function reverseString() {
         var stringa = document.getElementById("stringa").value;
-        return stringa.split("").reverse().join("");
+        return stringa.split("").reverse().join(""); //split divide in caratteri in un array di caratteri, reverse li gira e join li unisce in stringa nuovamente
     }
 
       function invertiStringa() {
@@ -69,10 +69,10 @@ function prendiVocali() {
        function convertiInOre() {
         var numero = document.getElementById("numeroInOre").value;
         var ore = (numero/60);
-        var arrotondaOre = Math.floor(ore);
+        var arrotondaOre = Math.round(ore);
 
         var minuti = (ore - arrotondaOre) * 60;
-        var arrotondaMinuti = Math.floor(minuti);
+        var arrotondaMinuti = Math.round(minuti);
         document.getElementById("risultatoE4").innerHTML = arrotondaOre + " ora/e " + arrotondaMinuti + " minuto/i"
 
        }
@@ -133,7 +133,7 @@ function prendiVocali() {
             
         }
 
-        
+
     
 
 
