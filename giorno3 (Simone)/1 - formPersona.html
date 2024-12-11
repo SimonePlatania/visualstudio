@@ -10,7 +10,6 @@
 
     <h1>REGISTRAZIONE UTENTE</h1>
 
-    <!-- Form di registrazione -->
     <form id="registrazione">
         <label for="nome">Nome:</label><br>
         <input id="nome" type="text" placeholder="Inserisci il nome" pattern="[A-Za-z\s]{3,}" required><br><br>
@@ -25,12 +24,11 @@
         <input id="data" type="date" min="1900-01-01" required><br><br>
 
         <label for="nazionalita">Nazionalità:</label><br>
-        <input id="nazionalita" type="text" placeholder="Inserisci la nazionalità" pattern="[A-Za-z\s]{3,}" required><br><br>
+        <input id="nazionalita" type="text" placeholder="Inserisci la nazionalità" pattern="[A-Za-z\s]{2,}" required><br><br>
 
         <button type="button" id="inserisci">Inserisci nella tabella</button>
     </form>
 
-    <!-- Tabella dove verranno inseriti gli utenti -->
     <h2>Utenti Registrati</h2>
     <table border="1" id="tabella-utenti">
         <thead>
@@ -40,54 +38,14 @@
                 <th>Età</th>
                 <th>Data di Nascita</th>
                 <th>Nazionalità</th>
+                <th>Azioni</th>
             </tr>
         </thead>
         <tbody>
-            <!-- Righe inserite dinamicamente -->
+            
         </tbody>
-    </table>
+    </table><br><br><br>
 
-    <script>
-        // Seleziona il bottone e la tabella
-        const bottoneInserisci = document.getElementById('inserisci');
-        const tabellaUtenti = document.getElementById('tabella-utenti').getElementsByTagName('tbody')[0];
-
-        // Aggiungi un evento al clic sul bottone
-        bottoneInserisci.addEventListener('click', function () {
-            // Ottieni i valori dagli input
-            const nome = document.getElementById('nome').value.trim();
-            const cognome = document.getElementById('cognome').value.trim();
-            const eta = document.getElementById('eta').value.trim();
-            const data = document.getElementById('data').value;
-            const nazionalita = document.getElementById('nazionalita').value.trim();
-
-            // Verifica che tutti i campi siano compilati
-            if (!nome || !cognome || !eta || !data || !nazionalita) {
-                alert("Compila tutti i campi del form!");
-                return;
-            }
-
-            // Crea una nuova riga nella tabella
-            const nuovaRiga = tabellaUtenti.insertRow();
-
-            // Crea celle per la nuova riga
-            const cellaNome = nuovaRiga.insertCell(0);
-            const cellaCognome = nuovaRiga.insertCell(1);
-            const cellaEta = nuovaRiga.insertCell(2);
-            const cellaData = nuovaRiga.insertCell(3);
-            const cellaNazionalita = nuovaRiga.insertCell(4);
-
-            // Assegna i valori alle celle
-            cellaNome.textContent = nome;
-            cellaCognome.textContent = cognome;
-            cellaEta.textContent = eta;
-            cellaData.textContent = data; // Mantiene il formato ISO (YYYY-MM-DD)
-            cellaNazionalita.textContent = nazionalita;
-
-            // Resetta i campi del form
-            document.getElementById('registrazione').reset();
-        });
-    </script>
-
+    <script type = "text/javascript" src = "js/comportamento bottone.js"></script>
 </body>
 </html>

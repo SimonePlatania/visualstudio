@@ -1,134 +1,229 @@
-/* Stile generale del corpo */
-body {
-    font-family: 'Roboto', Arial, sans-serif;
-    background: linear-gradient(135deg, #f4f4f9, #e5e5e5);
+/* User Registration Stylesheet */
+
+:root {
+    /* Color Palette */
+    --primary-color: #2C3E50;
+    --secondary-color: #3498DB;
+    --background-light: #ECF0F1;
+    --text-primary: #333;
+    --text-secondary: #555;
+    --white: #FFFFFF;
+    --gradient: linear-gradient(135deg, #3498DB, #9B59B6);
+
+    /* Typography */
+    --font-primary: 'Poppins', sans-serif;
+    --font-size-base: 16px;
+
+    /* Spacing and Transitions */
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2rem;
+    --transition-speed: 0.3s;
+}
+
+/* Reset and Base Styles */
+* {
     margin: 0;
     padding: 0;
-    color: #333;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background: var(--gradient);
+    color: var(--text-primary);
     line-height: 1.6;
+    padding: var(--spacing-large);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
     min-height: 100vh;
+    animation: fadeIn 1s ease-in-out;
 }
 
-/* Titolo principale */
-h1 {
-    font-size: 2.5rem;
-    color: #4A90E2;
-    margin-bottom: 20px;
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Main Heading Styles */
+h1, h2 {
+    text-align: center;
+    color: var(--white);
+    margin-bottom: var(--spacing-large);
     text-transform: uppercase;
     letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Stile del form */
+h1 {
+    font-size: 2.5rem;
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: var(--spacing-small);
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+}
+
+/* Form Styles */
 form {
-    background: #fff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background: var(--white);
     border-radius: 10px;
-    padding: 20px 30px;
-    max-width: 400px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: var(--spacing-large);
     width: 100%;
-    margin-bottom: 30px;
+    max-width: 500px;
+    margin-bottom: var(--spacing-large);
+    animation: slideUp 1s ease-out;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 form label {
-    font-weight: bold;
-    color: #555;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: var(--spacing-small);
+    font-weight: bold;
+    color: var(--text-secondary);
 }
 
 form input {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
+    padding: var(--spacing-medium);
+    margin-bottom: var(--spacing-medium);
+    border: 2px solid #E0E0E0;
     border-radius: 5px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
+    font-size: var(--font-size-base);
+    transition: all var(--transition-speed) ease;
 }
 
 form input:focus {
-    border-color: #4A90E2;
     outline: none;
-    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.4);
+    transform: scale(1.02);
 }
 
 form button {
-    background: #4A90E2;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
     width: 100%;
-    transition: background 0.3s ease;
-    text-transform: uppercase;
+    padding: var(--spacing-medium);
+    background: var(--gradient);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: var(--font-size-base);
     font-weight: bold;
-    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background var(--transition-speed), transform var(--transition-speed);
 }
 
 form button:hover {
-    background: #357ABD;
+    background: var(--secondary-color);
+    transform: translateY(-3px);
 }
 
-/* Tabella */
+form button:active {
+    transform: translateY(0);
+}
+
+/* Table Styles */
 table {
-    width: 90%;
-    max-width: 800px;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background: #fff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    background: var(--white);
+    border-collapse: separate;
+    border-spacing: 0;
     border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 table thead {
-    background: #4A90E2;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
+    background: var(--gradient);
+    color: var(--white);
+}
+
+table th, table td {
+    padding: var(--spacing-medium);
+    text-align: left;
+    border-bottom: 1px solid #E0E0E0;
 }
 
 table thead th {
-    padding: 15px;
-    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
 }
 
 table tbody tr:nth-child(even) {
-    background: #f9f9f9;
+    background: #F9F9F9;
 }
 
 table tbody tr:hover {
-    background: #eef5ff;
+    background: #F0F0F0;
+    transform: scale(1.01);
+    transition: transform var(--transition-speed);
 }
 
-table tbody td {
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
-    color: #555;
+table td:last-child button {
+    background: #E74C3C;
+    color: var(--white);
+    border: none;
+    padding: var(--spacing-small);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
 }
 
-/* Responsività */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
+table td:last-child button:hover {
+    background: #C0392B;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    body {
+        padding: var(--spacing-medium);
     }
 
     form {
-        padding: 15px 20px;
+        padding: var(--spacing-medium);
+    }
+
+    h1 {
+        font-size: 2rem;
     }
 
     table {
         font-size: 0.9rem;
     }
 
-    table thead {
-        font-size: 0.8rem;
+    table th, table td {
+        padding: var(--spacing-small);
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: none;
+    }
+
+    table {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
+
+/* Accessibility Enhancements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
     }
 }
