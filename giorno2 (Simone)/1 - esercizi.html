@@ -3,6 +3,7 @@
 	<head>
         <title>Esercizi 10/12/2024</title>
         <script type = "text/javascript" src = "js/esercizi.js"></script>
+        <link rel="stylesheet" href="css/css.css" />
     </head>
     <body>
 
@@ -11,6 +12,7 @@
 
                 <!--1)	Scrivi un programma JavaScript per calcolare il numero di giorni rimasti fino al prossimo Natale.-->
 
+                <h3>Esercizio 1 (Quanti giorni mancano a Natale?)</h3>
         <label><b>Clicca sotto </b> per scoprire quanti giorni mancano a natale!</label>
         <div><br>
             <button onclick="natale()">
@@ -20,7 +22,7 @@
         
 
         <!--2)	Scrivi un programma JavaScript per verificare se un dato numero positivo è un multiplo di 3 o un multiplo di 7.-->
-                <h3>Esercizio 2</h3>
+                <h3>Esercizio 2 (Questo numero è un multiplo di 3 o 7?)</h3>
         <div>
             <input type="number" id="numero" placeholder="multiplo di 3 o di 7">
             <button onclick="verificaMultiplo()">Controlla</button>
@@ -28,7 +30,7 @@
             <hr>
         </div>
 
-        <h3>Esercizio 3</h3>
+        <h3>Esercizio 3 (Ti rigiro la stringa)</h3>
         <div>
             <input type="type" id="stringa" placeholder="Inserisci un stringa per convertirla">
             <button onclick="invertiStringa()">Controlla</button>
@@ -38,7 +40,7 @@
 
         <!--4)	Scrivi un programma JavaScript per convertire un dato numero in ore e minuti.-->
 
-        <h3>Esercizio 4</h3>
+        <h3>Esercizio 4 (Trasforma i numeri in ore!)</h3>
         <div>
             <input type="number" id="numeroInOre" placeholder="Trasforma un numero in ore e minuti">
             <button onclick="convertiInOre()">Controlla</button>
@@ -48,7 +50,7 @@
 
         <!--5)	Scrivi un programma JavaScript per contare il numero di vocali in una data stringa.-->
 
-        <h3>Esercizio 5</h3>
+        <h3>Esercizio 5 (Quante vocali ha questa frase?)</h3>
         <div>
             <input type="type" id="vocali" placeholder="Quante vocali ha questa frase">
             <button onclick="prendiVocali()">Controlla</button>
@@ -56,7 +58,55 @@
             <hr>
         </div>
 
+        
+        <!--6)	Scrivi un programma JavaScript per concatenare due stringhe tranne il loro primo e terzo carattere.-->
 
+        <h3>Esercizio 6 (Ti concateno due stringhe, tranne il loro primo e terzo carattere)</h3>
+        <div>
+            <input type="type" id="stringa1" placeholder="Digita la prima stringa">
+            <input type="type" id="stringa2" placeholder="Digita la seconda stringa">
+            <button onclick="concatenazione()">Controlla</button>
+            <p id="risultatoE6"></p>
+            <hr>
+        </div>
+
+        <!--7)	Scrivete un programma JavaScript per creare una stringa usando i tre caratteri centrali di una data stringa di lunghezza dispari.
+        La lunghezza della stringa deve essere maggiore o uguale a tre.-->
+
+        <h3>Esercizio 7 (Ti do la parte centrale della stringa)</h3>
+        <div>
+            <input type="type" id="stringaE7" placeholder="Scrivi una stringa">
+            <button onclick="nuovaStringa()">Controlla</button>
+            <p id="risultatoE7"></p>
+            <hr>
+        </div>
+
+        
+        <!--8)	Scrivi un programma JavaScript per trovare il k-esimo elemento più grande di un dato array di numeri interi.-->
+
+        <h3>Esercizio 8 (Ti ritrovo il terzo numero più grande)</h3>
+        <div>
+        <input id="array1" type="number" placeholder="Primo numero">
+        <input id="array2" type="number" placeholder="Secondo numero">
+        <input id="array3" type="number" placeholder="Terzo numero">
+        <input id="array4" type="number" placeholder="Quarto numero">
+        <input id="array5" type ="number"placeholder="Quinto numero">
+        <button onclick="kesimo()">Controlla</button>
+        <p id="risultatoE8"></p>
+        </div>
+
+        <!--9)	Scrivi un programma JavaScript per ordinare un array di tutti i numeri primi compresi tra 1 e un dato numero intero.-->
+
+        <h3>Esercizio 9 (Ti ritrovo il terzo numero più grande)</h3>
+        <div>
+        <input id="array1" type="number" placeholder="Primo numero">
+        <input id="array2" type="number" placeholder="Secondo numero">
+        <input id="array3" type="number" placeholder="Terzo numero">
+        <input id="array4" type="number" placeholder="Quarto numero">
+        <input id="array5" type ="number"placeholder="Quinto numero">
+        <button onclick="kesimo()">Controlla</button>
+        <p id="risultatoE8"></p>
+        </div>
 
 
     </body>

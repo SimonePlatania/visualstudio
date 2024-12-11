@@ -77,6 +77,63 @@ function prendiVocali() {
 
        }
 
+       function concatenazione() {
+        var stringa1 = document.getElementById("stringa1").value;
+        var stringa2 = document.getElementById("stringa2").value;
 
+        var stringa1rotta = stringa1.slice(1, 2) + stringa1.slice(3);
+        var stringa2rotta = stringa2.slice(1, 2) + stringa2.slice(3);
+        var stringaSplittata = stringa1rotta.concat(stringa2rotta);
+
+        document.getElementById("risultatoE6").innerHTML = stringaSplittata;
+
+       }
+
+       //Scrivete un programma JavaScript per creare una stringa usando i tre caratteri centrali di una data stringa di lunghezza dispari.
+       //La lunghezza della stringa deve essere maggiore o uguale a tre.
+
+       function nuovaStringa() {
+            var stringaE7 = document.getElementById("stringaE7").value;
+
+            if (stringaE7.length % 2 === 0 || stringaE7.length < 3) {
+                alert("La stringa deve essere dispari")
+
+
+            } else {
+        //midpoint con MathFloor, prendendo la lunghezza e dividendo a metà.
+        var midpoint = Math.floor(stringaE7.length/2);
+        var primoCarattere = stringaE7[midpoint - 1];
+        var secondoCarattere = stringaE7[midpoint];
+        var terzoCarattere = stringaE7[midpoint + 1];
+
+        var stringResult = primoCarattere + secondoCarattere + terzoCarattere;
+
+        document.getElementById("risultatoE7").innerHTML = stringResult;
+
+            }
+
+       }
+
+       
+        function kesimo() {
+            // Converti gli input in numeri
+            const input1 = parseFloat(document.getElementById("array1").value);
+            const input2 = parseFloat(document.getElementById("array2").value);
+            const input3 = parseFloat(document.getElementById("array2").value);
+            const input4 = parseFloat(document.getElementById("array4").value);
+            const input5 = parseFloat(document.getElementById("array5").value);
+
+            const numeri = [input1, input2, input3, input4, input5];
+
+            const numeriOrdinati = numeri.sort((a,b) => b-a);
+
+            const terzoNumero = numeriOrdinati[2];
+
+            document.getElementById("risultatoE8").innerHTML = terzoNumero;
+            
+        }
+
+        
     
-    
+
+
