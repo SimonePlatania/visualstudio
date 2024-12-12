@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+        <title>Servizi per API</title>
+
+        <script type="text/javascript" src="js/4 - API con js (parte 1).js"></script>
+    </head>
+    <body>
+        <h1>Servizi per API</h1>
+
+        <div>
+            <button style="color: red" onclick="cercaProdotti()">
+                Cerca prodotti
+            </button>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="idProdotto">Id prodotto:</label>
+            <input id="idProdotto" type="number" />
+            <button style="color: blue" onclick="cercaSingoloProdotto()">
+                Cerca singolo prodotto
+            </button>
+        </div>
+
+        <br>
+
+        <div>
+            <button style="color: green" onclick="ripulisci()">
+                Ripulisci schermo
+            </button>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <div id="titolo"></div>
+        <div id="lista"></div>
+
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Utenti registrati</title>
+    <link rel="stylesheet" href="css/css.css" />
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>Lista impiegati</h1>
+    <h4 id="font">Fonte: https://jsonplaceholder.typicode.com/users</h4><br><br>
+
+    <table border="1" id="tabella-utenti">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefono</th>
+                <th>Azienda</th>
+                <th>Azioni</th>
+            </tr>
+        </thead>
+        <tbody id="corpo-tabella">
+
+        </tbody>
+    </table>
+
+    <script>
+
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then((responseObject) => responseObject.json())
+        .then((listaUser) => {
+            const corpoTabella = document.getElementById('corpo-tabella');
+            
+            listaUser.forEach(utente => {
+                const riga = document.createElement('tr');
+                riga.innerHTML = `
+                    <td>${utente.id}</td>
+                    <td>${utente.name}</td>
+                    <td>${utente.email}</td>
+                    <td>${utente.phone}</td>
+                    <td>${utente.company.name}</td>
+                    <td>
+                    <a href="file:///D:/Sviluppo/WorkspaceVSC/dettagli.html?id=${utente.id}" class="btn btn-primary">Dettagli utente</a>
+                    </td>`;
+
+                corpoTabella.appendChild(riga);
+            });
+        })
+        .catch(err => console.log("Errore generico", err));
+    </script>
+</body>
+</html>

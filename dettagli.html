@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Dettagli Utente</title>
+    <link rel = "stylesheet" href = "css/css2.css" />
+</head>
+<body>
+    <h1>Dettagli Utente</h1>
+    
+    <div class="user-detail">
+        <label>ID</label>
+        <div id="user-id"></div>
+    </div>
+
+    <div class="user-detail">
+        <label>Nome</label>
+        <div id="user-name"></div>
+    </div>
+
+    <div class="user-detail">
+        <label>Email</label>
+        <div id="user-email"></div>
+    </div>
+
+    <div class="user-detail">
+        <label>Telefono</label>
+        <div id="user-phone"></div>
+    </div>
+
+    <div class="user-detail">
+        <label>Azienda</label>
+        <div id="user-company"></div>
+    </div>
+
+
+    <a href="file:///D:/Sviluppo/WorkspaceVSC/giorno4%20(Simone)/index.html" class="back-link">Torna alla lista utenti</a>
+
+    <script>
+
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1]);
+        }
+
+        const userId = getUrlParameter('id');
+
+        if (userId) {
+            fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
+                .then(response => response.json())
+                .then(user => {
+                    document.getElementById('user-id').textContent = user.id;
+                    document.getElementById('user-name').textContent = user.name;
+                    document.getElementById('user-email').textContent = user.email;
+                    document.getElementById('user-phone').textContent = user.phone;
+                    document.getElementById('user-company').textContent = user.company.name;
+                        ;
+                })
+                .catch(err => {
+                    console.error("Errore nel recuperare i dettagli dell'utente", err);
+                    alert("Impossibile recuperare i dettagli dell'utente");
+                });
+        } else {
+            alert("Nessun ID utente specificato");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+        <title>Servizi per API</title>
+
+        <script type="text/javascript" src="js/5 - API con js (parte 2).js"></script>
+    </head>
+    <body>
+        <h1>Servizi per API</h1>
+
+        <div>
+            <label for="title">Title: </label>
+            <input id="title" type="text"/>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="price">Price: </label>
+            <input id="price" type="number"/>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="description">Description: </label>
+            <textarea id="description" rows="4" cols="30"></textarea>
+        </div>
+
+        <br>
+
+        <div>
+            <button style="color: red" onclick="aggiungiProdotto()">
+                Aggiungi prodotto
+            </button>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <div>
+            <label for="idMod">Id: </label>
+            <input id="idMod" type="number"/>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="titleMod">Title: </label>
+            <input id="titleMod" type="text"/>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="priceMod">Price: </label>
+            <input id="priceMod" type="number"/>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="descriptionMod">Description: </label>
+            <textarea id="descriptionMod" rows="4" cols="30"></textarea>
+        </div>
+
+        <br>
+
+        <div>
+            <button style="color: red" onclick="modificaProdotto()">
+                Modifica prodotto
+            </button>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <div>
+            <button style="color: green" onclick="ripulisci()">
+                Ripulisci schermo
+            </button>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <div id="titolo"></div>
+        <div id="lista"></div>
+
+    </body>
+</html>
