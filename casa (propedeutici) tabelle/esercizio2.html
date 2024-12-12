@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Esercizio 2</title>
+    <link rel="stylesheet" href="css/esercizio3.css"/>
+    <script src="js/esercizio1.js" type="text/javascript"></script>
+</head>
+<body>
+    <h1>Form di inserimento</h1><br><br>
+    
+    <form>
+        <fieldset>
+            <label for="nome">Nome</label>
+            <input id="nome" type="text" placeholder="Aggiungi nome utente"><br><br>
+
+            <label for="eta">Eta</label>
+            <input id="eta" type="number" placeholder="Aggiungi eta"><br><br>
+            
+            <label for="corso">Corso</label>
+            <input id="corso" type="text" placeholder="Aggiungi il corso"><br><br>
+
+            <button type="button" onclick="aggiungiStudente()">Inserisci</button><br><br>
+        </fieldset>
+    </form>
+
+    <table id="tabellina" border="1">
+        <tbody>
+            <tr>
+                <td>Id</td>
+                <td>Nome</td>
+                <td>Eta</td>
+                <td>Corso</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

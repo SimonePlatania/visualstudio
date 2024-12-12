@@ -1,0 +1,36 @@
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        form {
+            background: var(--white);
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            padding: var(--spacing-large);
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: var(--spacing-large);
+            animation: slideUp 1s ease-out;
+        }
+        table {
+            text-align: center;
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        .errore {
+            color: red;
+            font-size: 0.8em;
+        }
